@@ -1,13 +1,13 @@
 language: android
 android:
   components:
+    - tools
     - build-tools-25.0.2
     - android-25
     - android-21
     - add-on
     - extra
     - platform-tools
-    - tools
     - extra-google-googleplayservices
     - extra-google-m2repository
     - extra-android-m2repository
