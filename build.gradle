@@ -21,3 +21,13 @@ allprojects {
 task clean(type: Delete) {
     delete rootProject.buildDir
 }
+
+/*
+signingConfigs {
+    release {
+        storeFile file("../MobSoftLab.keystore")
+        storePassword System.getenv('STOREPASSWORD')
+        keyAlias "MobSoftLab"
+        keyPassword System.getenv('KEY_PASSWORD')
+    }
+}*/
