@@ -4,21 +4,18 @@ import com.orm.dsl.Table;
 
 
 @Table
-public class User {
+public class Todo {
     private Long id = null;
     private String name;
-    private String email;
 
 
-    public User() {
+    public Todo() {
     }
 
-    public User(Long id, String name, String email) {
+    public Todo(Long id, String name) {
         this.id = id;
         this.name = name;
-        this.email = email;
     }
-
 
     public Long getId() {
         return id;
@@ -36,11 +33,5 @@ public class User {
         this.name = name;
     }
 
-    public String getEmail() {
-        return email;
-    }
 
-    public void setEmail(String email) {
-        this.email = email;
-    }
 }
