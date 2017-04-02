@@ -1,16 +1,17 @@
 package hu.bme.aut.mobsoft.mobsoftlab.ui.main;
 
+import javax.inject.Inject;
+
+import hu.bme.aut.mobsoft.mobsoftlab.interactor.todo.FavouritesInteractor;
 import hu.bme.aut.mobsoft.mobsoftlab.ui.Presenter;
 
-/**
- * Created by Patrik on 2017. 03. 19..
- */
 
 public class MainPresenter extends Presenter<MainScreen> {
 
+    @Inject
+    FavouritesInteractor favouritesInteractor;
 
-    public MainPresenter() {
-    }
+
 
     @Override
     public void attachScreen(MainScreen screen) {
