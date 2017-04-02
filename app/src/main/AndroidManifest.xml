@@ -3,6 +3,7 @@
     package="hu.bme.aut.mobsoft.mobsoftlab">
 
     <application
+        android:name=".MobSoftApplication"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"

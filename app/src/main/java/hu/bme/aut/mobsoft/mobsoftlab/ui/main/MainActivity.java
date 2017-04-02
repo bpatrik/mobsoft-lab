@@ -6,6 +6,7 @@ import android.widget.Toast;
 
 import javax.inject.Inject;
 
+import hu.bme.aut.mobsoft.mobsoftlab.MobSoftApplication;
 import hu.bme.aut.mobsoft.mobsoftlab.R;
 
 public class MainActivity extends AppCompatActivity implements MainScreen {
@@ -17,6 +18,7 @@ public class MainActivity extends AppCompatActivity implements MainScreen {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        MobSoftApplication.injector.inject(this);
     }
 
     @Override
