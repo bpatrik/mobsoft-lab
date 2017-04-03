@@ -44,9 +44,9 @@ public class MemoryRepository implements Repository {
 	public void updateFavourites(List<Todo> todos) {
 		for (int i = 0; i < this.todos.size(); i++) {
 			Todo favourite = this.todos.get(i);
-			for (Todo flight : todos) {
-				if (flight.getId().equals(favourite.getId())) {
-					this.todos.set(i, flight);
+			for (Todo todo : todos) {
+				if (todo.getId().equals(favourite.getId())) {
+					this.todos.set(i, todo);
 				}
 			}
 		}

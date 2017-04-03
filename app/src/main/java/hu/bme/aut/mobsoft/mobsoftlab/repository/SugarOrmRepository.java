@@ -33,13 +33,13 @@ public class SugarOrmRepository implements Repository {
     }
 
     @Override
-    public void updateFavourites(List<Todo> flights) {
+    public void updateFavourites(List<Todo> todos) {
         List<Todo> favourites = getFavourites();
         List<Todo> toUpdate = new ArrayList<>(favourites.size());
         for (Todo favourite : favourites) {
-            for (Todo flight : flights) {
-                if (flight.getId().equals(favourite.getId())) {
-                    toUpdate.add(flight);
+            for (Todo todo : todos) {
+                if (todo.getId().equals(favourite.getId())) {
+                    toUpdate.add(todo);
                 }
             }
         }
