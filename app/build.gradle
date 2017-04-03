@@ -39,4 +39,5 @@ dependencies {
 
 
     compile 'com.github.satyan:sugar:1.4'
+    compile 'de.greenrobot:eventbus:2.4.0'
 }
