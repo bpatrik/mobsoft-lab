@@ -51,6 +51,7 @@ public class MainPresenter extends Presenter<MainScreen> {
 
 
     public void onEventMainThread(GetFavouritesEvent event) {
+        Log.d("test","test");
         if (event.getThrowable() != null) {
             event.getThrowable().printStackTrace();
             if (screen != null) {
@@ -60,7 +61,7 @@ public class MainPresenter extends Presenter<MainScreen> {
         } else {
             if (screen != null) {
                 for(Todo t : event.getTodos()){
-                    screen.showMessage(t.getName());;
+                    screen.showMessage(t.getName());
                 }
             }
         }

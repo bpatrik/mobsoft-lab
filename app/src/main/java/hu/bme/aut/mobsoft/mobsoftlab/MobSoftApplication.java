@@ -15,7 +15,14 @@ public class MobSoftApplication extends Application {
 
 	public static MobSoftApplicationComponent injector;
 
-	@Override
+
+	public void setInjector(MobSoftApplicationComponent appComponent) {
+		injector = appComponent;
+		injector.inject(this);
+		repository.open(getApplicationContext());
+	}
+
+    @Override
 	public void onCreate() {
 		super.onCreate();
 
