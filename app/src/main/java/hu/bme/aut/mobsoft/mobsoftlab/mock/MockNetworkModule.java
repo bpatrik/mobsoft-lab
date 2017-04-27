@@ -30,7 +30,7 @@ public class MockNetworkModule {
 	@Singleton
 	public OkHttpClient provideOkHttpClient(OkHttpClient.Builder builder) {
 
-		builder.interceptors().add(3, new Interceptor() {
+		builder.interceptors().add(new Interceptor() {
 			@Override
 			public Response intercept(Chain chain) throws IOException {
 				Request request = chain.request();

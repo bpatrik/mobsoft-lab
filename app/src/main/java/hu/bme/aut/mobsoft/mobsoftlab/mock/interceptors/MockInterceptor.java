@@ -28,7 +28,7 @@ public class MockInterceptor implements Interceptor {
 		Headers headers = request.headers();
 
 
-		if (uri.getPath().startsWith(NetworkConfig.ENDPOINT_PREFIX + "Todos")) {
+		if (uri.getPath().startsWith(NetworkConfig.ENDPOINT_PREFIX + "todo")) {
 			return TodoMock.process(request);
 		}
 

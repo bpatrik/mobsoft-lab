@@ -17,7 +17,7 @@ public interface TodoApi {
    */
   
   @POST("Todo")
-  Call<Void> todoCreate(
+  Call<Void> saveFavourite(
     @Body Todo data
   );
 

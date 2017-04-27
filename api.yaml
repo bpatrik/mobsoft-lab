@@ -19,13 +19,13 @@
         "text/javascript"
     ],
     "paths": {
-        "/Todo": {
+        "/todo/favourite": {
             "post": {
                 "tags": [
                     "Todo"
                 ],
-                "summary": "Create a new instance of the model and persist it into the data source.",
-                "operationId": "Flight_create",
+                "summary": "Save a Todo as favourite",
+                "operationId": "favourite_create",
                 "parameters": [
                     {
                         "name": "data",

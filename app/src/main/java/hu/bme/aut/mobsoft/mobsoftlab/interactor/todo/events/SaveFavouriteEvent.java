@@ -5,7 +5,7 @@ import hu.bme.aut.mobsoft.mobsoftlab.model.Todo;
 
 public class SaveFavouriteEvent {
 	private int code;
-	private Todo todos;
+	private Todo todo;
 	private Throwable throwable;
 
 	//<editor-fold desc="Constructors|Getters|Setters">
@@ -13,9 +13,9 @@ public class SaveFavouriteEvent {
 	public SaveFavouriteEvent() {
 	}
 
-	public SaveFavouriteEvent(int code, Todo todos, Throwable throwable) {
+	public SaveFavouriteEvent(int code, Todo todo, Throwable throwable) {
 		this.code = code;
-		this.todos = todos;
+		this.todo = todo;
 		this.throwable = throwable;
 	}
 
@@ -28,11 +28,11 @@ public class SaveFavouriteEvent {
 	}
 
 	public Todo getTodo() {
-		return todos;
+		return todo;
 	}
 
-	public void setTodo(Todo flight) {
-		this.todos = flight;
+	public void setTodo(Todo todo) {
+		this.todo = todo;
 	}
 
 	public Throwable getThrowable() {

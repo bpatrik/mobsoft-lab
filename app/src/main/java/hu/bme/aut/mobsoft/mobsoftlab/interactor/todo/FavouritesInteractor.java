@@ -10,6 +10,7 @@ import hu.bme.aut.mobsoft.mobsoftlab.interactor.todo.events.GetFavouritesEvent;
 import hu.bme.aut.mobsoft.mobsoftlab.interactor.todo.events.RemoveFavouriteEvent;
 import hu.bme.aut.mobsoft.mobsoftlab.interactor.todo.events.SaveFavouriteEvent;
 import hu.bme.aut.mobsoft.mobsoftlab.model.Todo;
+import hu.bme.aut.mobsoft.mobsoftlab.network.todo.TodoApi;
 import hu.bme.aut.mobsoft.mobsoftlab.repository.Repository;
 
 
@@ -17,8 +18,13 @@ public class FavouritesInteractor {
 
     @Inject
     Repository repository;
+
     @Inject
     EventBus bus;
+
+    @Inject
+    TodoApi todoApi;
+
 
     public FavouritesInteractor() {
         MobSoftApplication.injector.inject(this);
@@ -36,12 +42,13 @@ public class FavouritesInteractor {
         }
     }
 
-    public void saveFavourites(Todo todos) {
+    public void saveFavourite(Todo todo) {
 
         SaveFavouriteEvent event = new SaveFavouriteEvent();
-        event.setTodo(todos);
+        event.setTodo(todo);
         try {
-            repository.saveFavourite(todos);
+            todoApi.saveFavourite(todo).execute();
+            repository.saveFavourite(todo);
             bus.post(event);
         } catch (Exception e) {
             event.setThrowable(e);
