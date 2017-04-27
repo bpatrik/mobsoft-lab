@@ -4,3 +4,5 @@ master: [![Build Status](https://travis-ci.org/bpatrik/mobsoft-lab.svg?branch=ma
 
 Swagger editor:
 http://editor.swagger.io/
+
+To run the app on emulator/device use mock network and mock repository

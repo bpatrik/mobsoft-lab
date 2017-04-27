@@ -1,11 +1,14 @@
 package hu.bme.aut.mobsoft.mobsoftlab.model;
 
+import com.google.gson.annotations.SerializedName;
 import com.orm.dsl.Table;
 
 
 @Table
 public class Todo {
     private Long id = null;
+
+    @SerializedName("name")
     private String name;
 
 
