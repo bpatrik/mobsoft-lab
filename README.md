@@ -6,3 +6,7 @@ Swagger editor:
 http://editor.swagger.io/
 
 To run the app on emulator/device use mock network and mock repository
+
+## Application sample architecture:
+
+[![architecture](arch.png?raw=true)](arch.png?raw=true)
