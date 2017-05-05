@@ -11,5 +11,5 @@ To run the app on emulator/device use mock network and mock repository
 
 [![architecture](arch.png?raw=true)](arch.png?raw=true)
 
-## Lab6 feedback:
+## Lab7 feedback:
 https://goo.gl/forms/78Ayi5W7INWP3jib2
